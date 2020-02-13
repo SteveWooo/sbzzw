@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>带嘉仪看烟花</title>
+
+
+</head>
+<body>
+
+
+<div class="jq22">
+
+</div>
+
+<!-- <video src="./yanhuo.mp3" id="video" muted autoplay > l</video> -->
+
+<audio controls="controls" id="audio" style="display:none">
+    <source src="./yanhuo.mp3" type="audio/mp3" />
+Your browser does not support this audio format.
+</audio>
+
+<div style="width:100%;text-align: center;position: absolute;bottom: 10px;">
+    <button style="border: none;border-radius: 10px;width:200px;height: 50px;line-height: 50px;
+        color: #111;font-size:20px;;" id="testbutton">start</button>
+</div>
+
+<script type="text/javascript" src="../static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery.fireworks.js"></script>
+<script type="text/javascript">
+    var testbutton = document.getElementById('testbutton');
+    testbutton.addEventListener('click', function(){
+        var audio = document.getElementById('audio');
+        audio.play();
+        $('#testbutton').hide();
+
+        $('.jq22').fireworks({
+            sound: false, // sound effect
+            opacity: 0.9,
+            width: '100%',
+            height: '100%'
+        });
+
+    });
+   
+  
+</script>
+ <script>
+ 	/*
+    var audio = document.getElementById('audio1');
+    audio.play();*/
+    
+</script> 
+
+</body>
+</html>
